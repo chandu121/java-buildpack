@@ -15,6 +15,7 @@
 # limitations under the License.
 
 require 'java_buildpack/component/base_component'
+require 'java_buildpack/logging/logger_factory'
 require 'java_buildpack/container'
 require 'java_buildpack/util/dash_case'
 require 'java_buildpack/util/java_main_utils'
