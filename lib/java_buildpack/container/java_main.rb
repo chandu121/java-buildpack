@@ -38,7 +38,7 @@ module JavaBuildpack
         super(context)
 		@logger = JavaBuildpack::Logging::LoggerFactory.instance.get_logger JavaMain
         @spring_boot_utils = JavaBuildpack::Util::SpringBootUtils.new
-		@logger.debug { "spring_boot_utils --  #{spring_boot_utils}" }
+		@logger.debug { "spring_boot_utils -- " }
       end
 
       # (see JavaBuildpack::Component::BaseComponent#detect)
