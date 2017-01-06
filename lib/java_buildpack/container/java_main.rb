@@ -64,7 +64,7 @@ module JavaBuildpack
 		  @logger.debug { "spring_boot_utils not springboot --  " }
         end
 
-        classpath = @spring_boot_utils.is?(@application) ? '-cp $PWD/.' : @droplet.additional_libraries.as_classpath
+        classpath = @spring_boot_utils.is?(@application) ? '-cp $PWD/.:$PWD/lib/*' : @droplet.additional_libraries.as_classpath
 		@logger.debug { "spring_boot_utils classpath --  #{classpath}" }
 		
         release_text(classpath)
