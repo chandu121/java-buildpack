@@ -58,10 +58,10 @@ module JavaBuildpack
 
         if @spring_boot_utils.is?(@application)
           @droplet.environment_variables.add_environment_variable 'SERVER_PORT', '$PORT'
-		  @logger.debug { "spring_boot_utils is springboot --  #{droplet}" }
+		  @logger.debug { "spring_boot_utils is springboot -- " }
         else
           @droplet.additional_libraries.insert 0, @application.root
-		  @logger.debug { "spring_boot_utils not springboot --  #{droplet}" }
+		  @logger.debug { "spring_boot_utils not springboot --  " }
         end
 
         classpath = @spring_boot_utils.is?(@application) ? '-cp $PWD/.' : @droplet.additional_libraries.as_classpath
