@@ -36,6 +36,7 @@ module JavaBuildpack
       # @param [Hash] context a collection of utilities used the component
       def initialize(context)
         super(context)
+		@logger = JavaBuildpack::Logging::LoggerFactory.instance.get_logger JavaMain
         @spring_boot_utils = JavaBuildpack::Util::SpringBootUtils.new
 		@logger.debug { "spring_boot_utils --  #{spring_boot_utils}" }
       end
